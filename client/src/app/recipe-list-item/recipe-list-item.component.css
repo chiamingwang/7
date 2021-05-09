@@ -1,0 +1,8 @@
+.recipe-list-item {
+	max-width: 600px;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+	line-height: 25px;
+	padding: 15px 20px;
+	background-color: ghostwhite;
+}

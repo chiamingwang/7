@@ -1,0 +1,16 @@
+body {
+	padding: 50px;
+	font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+}
+
+a {
+	color: red;
+	text-transform: capitalize;
+	text-decoration: none;
+}
+
+#recipes-goback{
+	margin-left: 10px;
+}
+

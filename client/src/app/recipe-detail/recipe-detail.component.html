@@ -1,0 +1,11 @@
+<h3>Recipe Detail</h3>
+<div  *ngIf="recipeItem">
+	<div><b>Title:</b> {{ recipeItem.name }} </div>
+	<div><b>Ingredients: </b>{{ recipeItem.ingredients}}</div>
+	<div><b>Steps:</b> {{ recipeItem.steps }}</div>
+	<div><b>Timers:</b> {{ recipeItem.timers }} </div>
+	<div><b>CreatedAt:</b> {{ recipeItem.createdAt }} </div>
+	<div><button (click)="handleDelete($event)">Delete</button></div>
+</div>
+
+<a routerLink="/recipe-list">Go Back</a>
