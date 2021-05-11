@@ -3,4 +3,4 @@
 	*ngFor="let recipe of recipeList" 
 	[recipe]="recipe">
 </app-recipe-list-item>
-<button><a href="">&#10133; New Recipe</a></button>
+<app-new-recipe (newRecipe)="updateRecipeList()"></app-new-recipe>

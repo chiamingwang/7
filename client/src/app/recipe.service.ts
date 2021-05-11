@@ -17,7 +17,8 @@ export class RecipeService {
 	}
 
 	create(data) {
-		return this.http.post(`${this.apiurl}/recipes`, data);
+		//return this.http.post(`${this.apiurl}/recipes`, data);
+		return this.http.post(this.apiurl+'/recipes', data)
 	}
 
 	read(id) {

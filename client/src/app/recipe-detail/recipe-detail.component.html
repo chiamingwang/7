@@ -1,11 +1,29 @@
 <h3>Recipe Detail</h3>
-<div  *ngIf="recipeItem">
-	<div><b>Title:</b> {{ recipeItem.name }} </div>
+<div *ngIf="recipeItem">
+	<div><b>Name:</b> {{ recipeItem.name }} </div>
 	<div><b>Ingredients: </b>{{ recipeItem.ingredients}}</div>
 	<div><b>Steps:</b> {{ recipeItem.steps }}</div>
 	<div><b>Timers:</b> {{ recipeItem.timers }} </div>
 	<div><b>CreatedAt:</b> {{ recipeItem.createdAt }} </div>
-	<div><button (click)="handleDelete($event)">Delete</button></div>
+	<div><button (click)="handleDelete($event)">Delete Recipe</button></div>
 </div>
+
+<h3 style="margin: 20px 0;">Editing the recipe</h3>
+<form #form="ngForm" (ngSubmit)="updateRecipe(form.value)">
+        <label for="nameField">Name:</label>
+        <input #name id="nameField" name="nameField" [ngModel]="recipeItem.name">
+        <br />
+        <label for="ingreField">Ingredients:</label>
+        <input name="ingreField" size="100" [ngModel]="recipeItem.ingredients">
+		<br/>
+		<label for="stepsField">Steps:</label>
+        <input name="stepsField" size="150" [ngModel]="recipeItem.steps">
+		<br/>
+		<label for="timersField">Timers:</label>
+        <input name="timersField" [ngModel]="recipeItem.timers">
+		<br/>
+     <button type="submit">save</button>
+</form>
+
 
 <a routerLink="/recipe-list">Go Back</a>

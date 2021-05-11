@@ -34,4 +34,15 @@ export class RecipeDetailComponent implements OnInit {
 			})
 		}
 	}
+
+	updateRecipe(obj:any):void {
+		this.recipeItem.name = obj.nameField;
+		this.recipeItem.ingredients = obj.ingreField;
+		this.recipeItem.steps = obj.stepsField;
+		this.recipeItem.timers = obj.timersField;
+		this.recipeService.update(this.recipeItem._id, this.recipeItem)
+		.subscribe((result)=>{
+			location.reload();
+		});
+	}
 }

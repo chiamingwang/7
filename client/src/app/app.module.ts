@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { RecipeListItemComponent } from './recipe-list-item/recipe-list-item.component';
 import { RecipeDetailComponent } from './recipe-detail/recipe-detail.component';
+import { FormsModule } from '@angular/forms';
+import { NewRecipeComponent } from './new-recipe/new-recipe.component';
 
 const routes: Routes = [
 	{path: '', redirectTo: '/recipe-list', pathMatch: 'full'},
@@ -20,12 +22,14 @@ const routes: Routes = [
     AppComponent,
     RecipeListComponent,
     RecipeListItemComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    NewRecipeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 	HttpClientModule,
+	FormsModule,
 	RouterModule.forRoot(routes)
   ],
   providers: [],

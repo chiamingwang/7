@@ -39,16 +39,16 @@ app.use('/recipes', recipesRouter);
 app.use('/api/recipes', apiRecipes);
 
 
-app.use('/', (req, res) => {
+//app.use('/', (req, res) => {
    
-   var pattern = new RegExp('(.css|.html|.js|.ico|.jpg|.png)+\/?$', 'gi'); 
-   if (pattern.test(req.url)) {
-      let url = req.url.replace(/\/$/, "");
-      res.sendFile(path.resolve(__dirname, `../client/dist/${url}`));
-   } else {
-      res.sendFile(path.resolve(__dirname, '../client/dist/index.html'));
-   }
-});
+//   var pattern = new RegExp('(.css|.html|.js|.ico|.jpg|.png)+\/?$', 'gi'); 
+//   if (pattern.test(req.url)) {
+//      let url = req.url.replace(/\/$/, "");
+//      res.sendFile(path.resolve(__dirname, `../client/dist/${url}`));
+//   } else {
+//      res.sendFile(path.resolve(__dirname, '../client/dist/index.html'));
+//   }
+//});
 
 
 // catch 404 and forward to error handler

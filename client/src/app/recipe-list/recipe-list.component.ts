@@ -14,10 +14,17 @@ export class RecipeListComponent implements OnInit {
   	constructor(private recipeService : RecipeService) { }
 
 	ngOnInit(): void {
+		//const observable = this.recipeService.listRecipe();
+		//observable.subscribe((recipe) => {
+		//	this.recipeList = recipe;
+		//});
+		this.updateRecipeList();
+	}
+
+	updateRecipeList():void {
 		const observable = this.recipeService.listRecipe();
 		observable.subscribe((recipe) => {
 			this.recipeList = recipe;
-			console.log(this.recipeList);
 		});
 	}
 }
