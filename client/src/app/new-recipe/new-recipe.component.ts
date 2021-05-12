@@ -18,7 +18,7 @@ export class NewRecipeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-	onSubmit():void {
+	save(newRecipeForm):void {
 		let formData = new FormData();
 		formData.append('name', this.recipe.name );
 		formData.append('ingredients', this.recipe.ingredients);
@@ -28,6 +28,7 @@ export class NewRecipeComponent implements OnInit {
 		this.recipeService.create(formData)
 			.subscribe((recipe) => {
 			this.newRecipe.emit();
+			newRecipeForm.reset();
    	});
 
 	}

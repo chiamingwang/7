@@ -1,4 +1,4 @@
-const Recipe = require('../models/imageModel');
+const Recipe = require('../models/recipeModel');
 
 
 class RecipeService {

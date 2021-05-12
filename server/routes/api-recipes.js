@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const recipeController = require('../controllers/recipeController');
-const imageModel = require('../models/imageModel');
+const recipeModel = require('../models/recipeModel');
 const recipeService = recipeController.RecipeService;
 
 

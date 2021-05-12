@@ -8,7 +8,7 @@ import { environment } from '../environments/environment';
 })
 export class RecipeService {
 
-	apiurl = environment.apiurl;
+	private apiurl = environment.apiurl;
 
   	constructor(private http:HttpClient) { }
 
@@ -16,9 +16,9 @@ export class RecipeService {
 		return this.http.get( this.apiurl + '/recipes/');
 	}
 
-	create(data) {
+	create(recipe: FormData) {
 		//return this.http.post(`${this.apiurl}/recipes`, data);
-		return this.http.post(this.apiurl+'/recipes', data)
+		return this.http.post(this.apiurl+'/recipes', recipe);
 	}
 
 	read(id) {

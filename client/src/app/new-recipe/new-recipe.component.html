@@ -1,5 +1,5 @@
 <div>
-	<form #newRecipeForm="ngForm" (ngSubmit)="onSubmit()">
+	<form #newRecipeForm="ngForm" (ngSubmit)="save(newRecipeForm)">
         <label for="nameField">Name:</label>
         <input #name required id="name" name="name" [(ngModel)]="recipe.name"> 
         <br />
