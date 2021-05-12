@@ -8,7 +8,7 @@ import { RecipeService } from '../recipe.service';
 })
 export class NewRecipeComponent implements OnInit {
 
-  @Output() newRecipe = new EventEmitter();
+ @Output() newRecipe = new EventEmitter();
 
   recipe:any = {}
 
@@ -18,16 +18,9 @@ export class NewRecipeComponent implements OnInit {
   }
 
 	save(newRecipeForm):void {
-		let formData = new FormData();
-		formData.append('name', this.recipe.name );
-		formData.append('ingredients', this.recipe.ingredients);
-		formData.append('steps', this.recipe.steps);
-		formData.append('timers', this.recipe.timers);
-		formData.append('imageURL', this.recipe.imageURL);
-		this.recipeService.create(formData)
-			.subscribe((recipe) => {
-			this.newRecipe.emit();
-			newRecipeForm.reset();
+		 this.recipeService.create(this.recipe).subscribe((recipe) => {
+            this.newRecipe.emit();
+            newRecipeForm.reset();
    	});
 
 	}

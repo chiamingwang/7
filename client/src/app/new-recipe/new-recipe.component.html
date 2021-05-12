@@ -1,19 +1,19 @@
 <div>
 	<form #newRecipeForm="ngForm" (ngSubmit)="save(newRecipeForm)">
         <label for="nameField">Name:</label>
-        <input #name required id="name" name="name" [(ngModel)]="recipe.name"> 
+        <input #name id="name" name="name" [(ngModel)]="recipe.name"> 
         <br />
         <label for="ingreField">Ingredients:</label>
-        <input required name="ingredients" size="100" [(ngModel)]="recipe.ingredients">
+        <input name="ingredients" size="100" [(ngModel)]="recipe.ingredients">
 		<br/>
 		<label for="stepsField">Steps:</label>
-        <input required name="steps" size="150" [(ngModel)]="recipe.steps">
+        <input name="steps" size="150" [(ngModel)]="recipe.steps">
 		<br/>
 		<label for="timersField">Timers:</label>
-        <input required name="timers" [(ngModel)]="recipe.timers">
+        <input name="timers" [(ngModel)]="recipe.timers" type=”number”>
 		<br/>
 		<label for="timersField">ImageURL:</label>
-        <input required name="imageURL" [(ngModel)]="recipe.imageURL">
+        <input name="imageURL" [(ngModel)]="recipe.imageURL">
 		<br/>
      <button type="submit">save</button>
 </form>
