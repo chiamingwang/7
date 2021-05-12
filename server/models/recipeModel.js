@@ -6,11 +6,11 @@ const mongooseurl = require('mongoose-type-url');
 //create a schema
 const recipeJsonSchema = mongoose.Schema({
 		id:{ type: Number, required: false},
-		name: {type: String , required: false},
-		ingredients: {type: String, required: false},
-		steps: { type: String, required: false},	
-		timers: { type: Number, required: false},
-		imageURL: {type: mongoose.SchemaTypes.Url, required: false},
+		name: {type: String , required: true},
+		ingredients: {type: String, required: true},
+		steps: { type: String, required: true},	
+		timers: { type: Number, required: true},
+		imageURL: {type: mongoose.SchemaTypes.Url, required: true},
 		originalURL: {type: mongoose.SchemaTypes.Url, required: false},
 		createdAt: {type: Date, required: false},
 		updatedAt: {type: Date, required: false}

@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { RecipeService } from '../recipe.service';
-import { Recipe } from '../recipe';
 
 @Component({
   selector: 'app-new-recipe',
@@ -11,11 +10,11 @@ export class NewRecipeComponent implements OnInit {
 
   @Output() newRecipe = new EventEmitter();
 
-  recipe:any = {};
+  recipe:any = {}
 
   constructor(private recipeService : RecipeService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 	save(newRecipeForm):void {

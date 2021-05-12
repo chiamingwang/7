@@ -9,7 +9,6 @@ export class RecipeListItemComponent implements OnInit {
 
 	@Input() recipe;
 
-	isThumbsUp = false;
   	constructor() { }
 
 	ngOnInit(): void {
