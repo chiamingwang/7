@@ -27,12 +27,12 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HarvardDCENode/assignment-5-chiamingwang.git"
+    "url": "git+https://github.com/HarvardDCENode/assignment-7-chiamingwang.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HarvardDCENode/assignment-5-chiamingwang/issues"
+    "url": "https://github.com/HarvardDCENode/assignment-7-chiamingwang/issues"
   },
-  "homepage": "https://github.com/HarvardDCENode/assignment-5-chiamingwang#readme"
+  "homepage": "https://github.com/HarvardDCENode/assignment-7-chiamingwang#readme"
 }
